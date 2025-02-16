@@ -1,0 +1,58 @@
+/* Brand Logo */
+.navbar-brand img {
+  border-radius: 50%;
+}
+
+/* Navbar Toggler Button (Mobile Only) */
+.custom-toggler {
+  background-color: #A4671B !important;
+  border-radius: 5px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smooth Icon Animation */
+.toggler-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Default State - Bars Icon Visible */
+.bars-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Hidden Close Icon */
+.close-icon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+/* When Active, Toggle Icons */
+.custom-toggler.active .bars-icon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.custom-toggler.active .close-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Hide Toggler on Desktop */
+@media (min-width: 992px) {
+  .custom-toggler {
+    display: none !important;
+  }
+}
