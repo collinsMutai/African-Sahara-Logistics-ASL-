@@ -1,1 +1,52 @@
-<p>hero-slider works!</p>
+<div class="carousel" id="heroCarousel">
+  <div class="carousel-inner">
+    <div
+      *ngFor="let slide of slides; let i = index"
+      class="carousel-item"
+      [class.active]="i === currentIndex"
+    >
+      <img [src]="slide.image" class="d-block w-100" alt="Slide Image" />
+      <div class="carousel-caption">
+        <h4>African Sahara Logistics</h4>
+        <h1>Sourcing And Logistics Expertise</h1>
+        <button class="slider-button">{{ slide.buttonText }}</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" (click)="prevSlide()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M15 6l-6 6l6 6" />
+    </svg>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" (click)="nextSlide()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M9 6l6 6l-6 6" />
+    </svg>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
