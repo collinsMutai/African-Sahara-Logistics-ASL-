@@ -11,21 +11,21 @@ import { CommonModule } from '@angular/common';
 export class HeroSliderComponent implements OnInit {
   slides = [
     {
-      image: 'assets/slide-01.jpg',
+      image: 'assets/slide-07.jpg',
       title: 'Welcome to Our Service',
       subtitle: 'Discover amazing features with us.',
       buttonText: 'Get Started',
       buttonLink: '/get-started',
     },
     {
-      image: 'assets/slide-02.jpg',
+      image: 'assets/slide-08.jpg',
       title: 'Experience Innovation',
       subtitle: 'We bring ideas to life.',
       buttonText: 'Learn More',
       buttonLink: '/learn-more',
     },
     {
-      image: 'assets/slide-03.jpg',
+      image: 'assets/slide-09.jpg',
       title: 'Join Our Community',
       subtitle: 'Let’s grow together!',
       buttonText: 'Join Now',
