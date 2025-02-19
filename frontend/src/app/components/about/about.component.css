@@ -89,6 +89,7 @@
 
   .about-left {
     margin-bottom: 20px;
+    padding: 0; /* Remove excess padding on the right side */
   }
 
   .about-right {
