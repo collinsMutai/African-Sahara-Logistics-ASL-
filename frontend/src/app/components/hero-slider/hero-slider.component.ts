@@ -43,7 +43,7 @@ export class HeroSliderComponent implements OnInit {
   startAutoSlide() {
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
-    }, 3000);
+    }, 5000);
   }
 
   stopAutoSlide() {
