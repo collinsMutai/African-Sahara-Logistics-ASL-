@@ -1,17 +1,15 @@
-/* Animation classes */
 .img-scroll {
-  transition: transform 0.3s ease-out; /* Add smooth transition */
+  transition: transform 0.3s ease-out;
 }
 
 .img-rise {
-  transform: translateY(-20px); /* When scrolled down, image rises */
+  transform: translateY(-20px);
 }
 
 .img-fall {
-  transform: translateY(20px); /* When scrolled up, image falls */
+  transform: translateY(20px);
 }
 
-/* About Section Styles */
 .about {
   padding: 50px 0;
   background-color: #f4f4f4;
@@ -25,37 +23,35 @@
 .about-row {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Ensures both columns are equal height */
+  align-items: stretch;
 }
 
 .about-left,
 .about-right {
-  flex: 1; /* Make both columns take equal width */
+  flex: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 400px; /* Set a fixed height for both columns */
+  height: 400px;
 }
 
 .about-left {
-  height: 100%; /* Make sure the image column stretches */
+  height: 100%;
 }
 
 .about-right {
-  height: 100%; /* Make sure the text column stretches */
+  height: 100%;
 }
 
-/* Image on the left */
 .about-left img {
   width: 100%;
-  max-height: 520px !important; /* Make the image stretch to match the height of the column */
+  max-height: 520px !important;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the space properly */
+  object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease-out; /* Smooth transition for the scroll effect */
+  transition: transform 0.3s ease-out;
 }
 
-/* Text on the right */
 .about-heading {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -73,10 +69,9 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
-  flex-grow: 1; /* Allow the text to take up remaining space */
+  flex-grow: 1;
 }
 
-/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -84,17 +79,17 @@
 
   .about-row {
     flex-direction: column;
-    padding: 0 10px; /* Remove excess padding on left and right */
+    padding: 0 10px;
   }
 
   .about-left {
     margin-bottom: 20px;
-    padding: 0; /* Remove excess padding on the right side */
+    padding: 0;
   }
 
   .about-right {
-    text-align: left; /* Align text to the left */
-    padding: 0; /* Remove excess padding on the right side */
+    text-align: left;
+    padding: 0;
   }
 
   .about-heading {
