@@ -144,6 +144,14 @@
 }
 
 @media (max-width: 768px) {
+  .contact{
+    padding: 0px;
+  }
+
+  .contact-card-wrapper{
+    padding: 20px;
+  }
+
   .contact-row {
     grid-template-columns: 1fr;
   }
