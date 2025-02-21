@@ -11,13 +11,16 @@
 }
 
 .about {
-  padding: 50px 0;
+  padding: 50px;
   background-color: #f4f4f4;
 }
 
-.container {
-  width: 80%;
+.main-container {
+  width: 100%;
   margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .about-row {
@@ -73,8 +76,13 @@
 }
 
 @media (max-width: 768px) {
-  .container {
+  .about {
+    padding: 0px;
+  }
+
+  .main-container {
     width: 100%;
+    padding: 20px;
   }
 
   .about-row {

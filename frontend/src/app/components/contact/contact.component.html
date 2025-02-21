@@ -1,0 +1,124 @@
+<section class="contact" id="contact">
+  <div class="contact-card-wrapper">
+    <div class="main-container">
+      <div class="contact-row">
+        <div class="contact-column left-column">
+          <h1 class="contact-heading">Contact Us</h1>
+
+          <h3 class="contact-subheading">Get in touch with us</h3>
+          <p class="contact-item-text">
+            We’re here to assist you! Please reach out with any questions,
+            feedback, or project inquiries.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                />
+              </svg>
+              <div class="contact-item-details">
+                <p class="contact-item-title">Phone</p>
+                <p class="contact-item-text">+254706159900</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+                />
+                <path d="M3 7l9 6l9 -6" />
+              </svg>
+              <div class="contact-item-details">
+                <p class="contact-item-title">Email</p>
+                <p class="contact-item-text">info&#64;africsahara.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path
+                  d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                />
+              </svg>
+              <div class="contact-item-details">
+                <p class="contact-item-title">Address</p>
+                <p class="contact-item-text">
+                  P. O. Box 38703-00100 <br> C403 Astrol Building, Opposite Garden
+                  City - Thika road, <br> Nairobi, Kenya
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-column right-column">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" formControlName="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" formControlName="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                formControlName="message"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="submit-btn"
+              [disabled]="!contactForm.valid"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
