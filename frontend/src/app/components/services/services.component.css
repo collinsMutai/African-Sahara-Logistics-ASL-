@@ -94,6 +94,8 @@
 
   .services-heading {
     font-size: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   .services-subheading {
