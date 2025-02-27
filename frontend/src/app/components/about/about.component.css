@@ -60,6 +60,7 @@
   margin-bottom: 20px;
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 
 .about-subheading {
@@ -90,12 +91,13 @@
     padding: 0 10px;
   }
 
+  /* Hide left column on mobile */
   .about-left {
-    margin-bottom: 20px;
-    padding: 0;
+    display: none; /* Left column hidden */
   }
 
   .about-right {
+    width: 100%; /* Right column full width */
     text-align: left;
     padding: 0;
   }

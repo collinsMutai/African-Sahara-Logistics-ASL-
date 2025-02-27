@@ -45,3 +45,13 @@
 .scroll-to-top-btn {
   border-radius: 50%;
 }
+
+
+@media (max-width: 768px) {
+
+
+  .scroll-to-top-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
