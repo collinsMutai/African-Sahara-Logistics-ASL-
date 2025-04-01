@@ -9,18 +9,19 @@ import {
 import { FormsModule } from '@angular/forms';
 import * as emailjs from 'emailjs-com'; // Import EmailJS
 import { environment } from '../../../environments/environment';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule],
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -30,37 +31,28 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // Function to handle form submission
   onSubmit(): void {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
 
-      // Sending the form data to EmailJS
+      // Send the form data to the backend server
       this.sendEmail(formData);
     }
   }
 
-  // Send the email using EmailJS
+  // Function to send email by making a POST request to the backend API
   sendEmail(formData: any): void {
-    const serviceId = environment.emailjs.serviceId; // Get the service ID from environment
-    const templateId = environment.emailjs.templateId; // Get the template ID from environment
-    const userId = environment.emailjs.userId; // Get the user ID from environment
-
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-    };
-
-    emailjs.send(serviceId, templateId, templateParams, userId).then(
-      (response) => {
-        console.log('Email sent successfully:', response);
-        alert('Thank you for contacting us!');
-      },
-      (error) => {
-        console.error('Email sending error:', error);
-        alert('Something went wrong. Please try again.');
-      }
-    );
+    this.http
+      .post('https://www.africsahara.com/send-email', formData) // Update to the production URL
+      .subscribe(
+        (response) => {
+          console.log('Email sent successfully:', response);
+          alert('Thank you for contacting us!');
+        },
+        (error) => {
+          console.error('Error sending email:', error);
+          alert('Something went wrong. Please try again.');
+        }
+      );
   }
 }
