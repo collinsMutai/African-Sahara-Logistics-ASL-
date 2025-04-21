@@ -109,6 +109,11 @@
                 required
               ></textarea>
             </div>
+            <re-captcha
+            formControlName="recaptcha"
+            [siteKey]="siteKey"
+            (resolved)="resolved($event)"
+          ></re-captcha>
             <button
               type="submit"
               class="submit-btn"
